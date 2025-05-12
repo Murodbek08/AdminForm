@@ -57,7 +57,18 @@ modalForm.addEventListener("submit", function (e) {
   } else {
     developerData[selected] = developer;
   }
-  localStorage.setItem("developerData", JSON.stringify(developerData));
+  if (
+    this.firstName.value !== "" ||
+    this.lastName.value !== "" ||
+    this.birthDay.value !== "" ||
+    this.salary.value !== "" ||
+    this.position.value !== "" ||
+    this.typePosition.value !== ""
+  ) {
+    localStorage.setItem("developerData", JSON.stringify(developerData));
+  } else {
+    developerInformation();
+  }
   tbodyItem();
 });
 function developerInformation(el, i) {
