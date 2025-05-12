@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+  <div class="modal">
+    <h3 class="modal-title">
+      <img src="./images/person-icon.svg" alt="Person Icon ?" />
+      <span>Add New Developer</span>
+    </h3>
+    <form id="modal-form">
+      <div class="firs-or-last-names">
+        <div class="first-name">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="Enter first name" />
+        </div>
+        <div class="last-name">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Enter last name" />
+        </div>
+      </div>
+      <div class="birth_day-or-salary">
+        <div class="birthday">
+          <label for="birthDay">Birth Day</label>
+          <input type="date" id="birthDay" />
+        </div>
+        <div class="salary">
+          <label for="salary">Salary (USD)</label>
+          <input type="number" id="salary" />
+        </div>
+      </div>
+      <div class="position-or-level">
+        <div class="position">
+          <label for="position">Position</label>
+          <select id="position">
+            <option value="">Select position</option>
+            <option value="ReactJS developer">ReactJS developer</option>
+            <option value="NodeJS developer">NodeJS developer</option>
+            <option value="React Native">React Native</option>
+            <option value="Full Stack">Full Stack</option>
+            <option value="UI/UX">UI/UX</option>
+          </select>
+        </div>
+        <div class="type-position">
+          <label for="typePosition">Experience Level</label>
+          <select id="typePosition">
+            <option value="">Select level</option>
+            <option value="Junior">Junior</option>
+            <option value="Middle">Middle</option>
+            <option value="Senior">Senior</option>
+          </select>
+        </div>
+      </div>
+      <div class="married">
+        <label for="married" class="custom-checkbox">
+          <input id="married" type="checkbox" />
+          <span class="checkmark"></span>
+          Married
+        </label>
+        <div>
+          <button class="close-developer-btn">Close</button>
+          <button class="save-developer-btn">Save Developer</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <form id="header-form">
+            <div class="input-search">
+              <input placeholder="Search..." type="text" />
+              <img src="./images/search-icon.svg" alt="Search Icon ?" />
+            </div>
+            <select id="filterPosition" name="filterPosition">
+              <option value="">All Positions</option>
+              <option value="ReactJS developer">ReactJS developer</option>
+              <option value="NodeJS developer">NodeJS developer</option>
+              <option value="React Native">React Native</option>
+              <option value="Full Stack">Full Stack</option>
+              <option value="UI/UX">UI/UX</option>
+            </select>
+            <select id="filterTypePosition" name="filterTypePosition">
+              <option value="">All Levels</option>
+              <option value="Junior">Junior</option>
+              <option value="Middle">Middle</option>
+              <option value="Senior">Senior</option>
+            </select>
+            <button type="button" class="add-developer-btn">
+              <img src="./images/person-add.svg" alt="Person Add icon ?" />
+              <span>Add New Developer</span>
+            </button>
+          </form>
+        </nav>
+      </div>
+    </header>
+    <section class="developers-section">
+      <div class="container">
+        <h2>
+          <img src="./images/peole-icon.svg" alt="People Icon ?" />
+          <span>Developers</span>
+        </h2>
+        <table class="add-developer-content">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Birth Day</th>
+              <th>Salary (USD)</th>
+              <th>Position</th>
+              <th>Experience Level</th>
+              <th>Married</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <div class="developer-items"></div>
+        </table>
+      </div>
+    </section>
+    <script src="./Js/main.js"></script>
+  </body>
+</html>
